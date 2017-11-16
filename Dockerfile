@@ -5,7 +5,6 @@ LABEL tag="1.0"
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN echo $TIMEZONE > /etc/timezone && dpkg-reconfigure tzdata
 RUN apt-get update -qqy && apt-get install -qqy \
          curl \
          gcc \
